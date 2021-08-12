@@ -87,3 +87,23 @@ Con lo anterior, y con los tiempos de ejecución dados, haga una gráfica de tie
 
 
 
+# Desarrollo
+
+## Parte 1
+
+### Creacion de los hilos
+![](img/Threads-Creation.PNG)
+
+### Inicio de los tres hilos con 'start()'
+![](img/Threads-Execution-Start.PNG)
+
+### Salida por pantalla
+![](img/Threads-Start.PNG)
+
+### Salida por pantalla con 'run()'
+![](img/Threads-Run.PNG)
+
+La salida cambia con respecto a start, en que con run se ejecutan los threads de una manera 'ordenada' y con start tiene una ejecución más 'aleatoria'.
+
+Con Thread.start() se crea un nuevo hilo con su propio escenario de ejecucion, en cambio con Thread.run() no se crea nungun hilo nuevo y se ejecuta todo en el mismo hilo de forma síncrona.
+https://www.it-swarm-es.com/es/java/cual-es-la-diferencia-entre-thread-start-y-runnable-run/941187813/ 
