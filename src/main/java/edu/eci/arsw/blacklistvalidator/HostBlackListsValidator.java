@@ -29,24 +29,36 @@ public class HostBlackListsValidator {
      * @param ipaddress suspicious host's IP address.
      * @return  Blacklists numbers where the given host's IP address was found.
      */
-    public List<Integer> checkHost(String ipaddress){
-        
-        LinkedList<Integer> blackListOcurrences=new LinkedList<>();
+    public List<Integer> checkHost(String ipaddress, Integer numberOfThreads){
         
         int ocurrencesCount=0;
-        
-        HostBlacklistsDataSourceFacade skds=HostBlacklistsDataSourceFacade.getInstance();
-        
         int checkedListsCount=0;
+        int range, firstServer, lastServer;
+        HostBlacklistsDataSourceFacade skds=HostBlacklistsDataSourceFacade.getInstance();
+        range = skds.getRegisteredServersCount()/numberOfThreads;
+        LinkedList<BlackListThreadValidator> blackListThreadValidator = new LinkedList<>();
+        LinkedList<Integer> blackListOcurrences=new LinkedList<>();
         
-        for (int i=0;i<skds.getRegisteredServersCount() && ocurrencesCount<BLACK_LIST_ALARM_COUNT;i++){
-            checkedListsCount++;
-            
-            if (skds.isInBlackListServer(i, ipaddress)){
-                
-                blackListOcurrences.add(i);
-                
-                ocurrencesCount++;
+        for(int i=0; i< numberOfThreads; i++){
+            firstServer = range*i;
+            lastServer = range*(i+1);
+
+            blackListThreadValidator.add(new BlackListThreadValidator(ipaddress, firstServer, lastServer, skds));
+        }
+
+        for(BlackListThreadValidator thread:blackListThreadValidator){
+            thread.start();
+        }
+
+        for(BlackListThreadValidator thread:blackListThreadValidator){
+            try {
+                thread.join();
+                ocurrencesCount += thread.getOcurrencesCount();
+                checkedListsCount += thread.getCheckedListCount();
+
+                blackListOcurrences.addAll(thread.getServers());
+            } catch (Exception e) {
+                System.out.println("Error");
             }
         }
         
