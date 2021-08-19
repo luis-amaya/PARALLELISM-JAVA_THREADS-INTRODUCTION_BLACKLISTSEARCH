@@ -110,7 +110,7 @@ https://www.it-swarm-es.com/es/java/cual-es-la-diferencia-entre-thread-start-y-r
 
 ## Parte 2
 
-![](img/IpNotTrustwortytest.PNG)
+![](img/IPNotTrustworthytest.PNG)
 ![](img/IPTrustworthyTest.PNG)
 
 ## Parte 3 Evaluacion de rendimiento
