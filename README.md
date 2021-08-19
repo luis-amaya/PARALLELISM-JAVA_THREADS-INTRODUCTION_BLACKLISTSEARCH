@@ -138,4 +138,14 @@ https://www.it-swarm-es.com/es/java/cual-es-la-diferencia-entre-thread-start-y-r
 
 ## Parte 4
 
+¿Por qué el mejor desempeño no se logra con los 500 hilos?, cómo se compara este desempeño cuando se usan 200?
 
+La ley de Amdahl dice que para los primeros 50 hilos se puede esperar que al duplicar el numero de estos el programa duplique tambien el rendimiento del mismo. Luego de los 400 nucleos la mejora en el rendimiento comienza a disminuir de una manera considerable. Esto se debe a que el procesador en uso no soporta la cantidad de hilos necesitados para el proceso.
+
+¿Cómo se comporta la solución usando tantos hilos de procesamiento como núcleos comparado con el resultado de usar el doble de éste?
+
+Se comporta de una manera casi lineal. Como se ven en las imágenes del punto anterior, cuando son 6 hilos tiene un tiempo de 24 segundos, mientras que con 12 hilos se demora 12 segundos.
+
+De acuerdo con lo anterior, si para este problema en lugar de 100 hilos en una sola CPU se pudiera usar 1 hilo en cada una de 100 máquinas hipotéticas, la ley de Amdahls se aplicaría mejor?. Si en lugar de esto se usaran c hilos en 100/c máquinas distribuidas (siendo c es el número de núcleos de dichas máquinas), se mejoraría?. Explique su respuesta.
+
+Si tenemos en cuenta la ley, podriamos deducir que nuestro programa se ejecutará y alcanzará su objetivo en un menor tiempo teniendo 100 threads, en el caso de las 100 maquinas, si tenemos en cuenta que tenemos que realizar el reconteo del resultado de cada maquina podriamos decir que esto seria mas complicado y llevaría más tiempo.
