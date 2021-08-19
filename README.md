@@ -136,6 +136,10 @@ https://www.it-swarm-es.com/es/java/cual-es-la-diferencia-entre-thread-start-y-r
 ### 500 Hilos
 ![](img/Threads-Number-of-Cores-500.PNG)
 
+Con lo anterior, y con los tiempos de ejecución dados, haga una gráfica de tiempo de solución vs. número de hilos. Analice y plantee hipótesis con su compañero para las siguientes preguntas (puede tener en cuenta lo reportado por jVisualVM):
+
+
+
 ## Parte 4
 
 ¿Por qué el mejor desempeño no se logra con los 500 hilos?, cómo se compara este desempeño cuando se usan 200?
