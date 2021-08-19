@@ -111,30 +111,30 @@ https://www.it-swarm-es.com/es/java/cual-es-la-diferencia-entre-thread-start-y-r
 ## Parte 2
 
 ![](img/IpNotTrustwortytest.PNG)
-![](img/IPTrustworthyTest)
+![](img/IPTrustworthyTest.PNG)
 
 ## Parte 3 Evaluacion de rendimiento
 
 ### Un solo hilo
-![](img/Single-Thread)
+![](img/Single-Thread.PNG)
 
 ### Tantos hilos como nucleos de procesamiento
-![](img/Threads-Number-of-Cores)
+![](img/Threads-Number-of-Cores.PNG)
 
 ### Tantos hilos como el doble de nucleos de procesamiento
-![](img/Threads-Number-of-Cores-Double)
+![](img/Threads-Number-of-Cores-Double.PNG)
 
 ### 50 Hilos
-![](img/Threads-Number-of-Cores-50)
+![](img/Threads-Number-of-Cores-50.PNG)
 
 ### 100 Hilos
-![](img/Threads-Number-of-Cores-100)
+![](img/Threads-Number-of-Cores-100.PNG)
 
 ### 200 Hilos
-![](img/Threads-Number-of-Cores-200)
+![](img/Threads-Number-of-Cores-200.PNG)
 
 ### 500 Hilos
-![](img/Threads-Number-of-Cores-500)
+![](img/Threads-Number-of-Cores-500.PNG)
 
 ## Parte 4
 
