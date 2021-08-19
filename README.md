@@ -107,3 +107,35 @@ La salida cambia con respecto a start, en que con run se ejecutan los threads de
 
 Con Thread.start() se crea un nuevo hilo con su propio escenario de ejecucion, en cambio con Thread.run() no se crea nungun hilo nuevo y se ejecuta todo en el mismo hilo de forma síncrona.
 https://www.it-swarm-es.com/es/java/cual-es-la-diferencia-entre-thread-start-y-runnable-run/941187813/ 
+
+## Parte 2
+
+![](img/IpNotTrustwortytest.PNG)
+![](img/IPTrustworthyTest)
+
+## Parte 3 Evaluacion de rendimiento
+
+### Un solo hilo
+![](img/Single-Thread)
+
+### Tantos hilos como nucleos de procesamiento
+![](img/Threads-Number-of-Cores)
+
+### Tantos hilos como el doble de nucleos de procesamiento
+![](img/Threads-Number-of-Cores-Double)
+
+### 50 Hilos
+![](img/Threads-Number-of-Cores-50)
+
+### 100 Hilos
+![](img/Threads-Number-of-Cores-100)
+
+### 200 Hilos
+![](img/Threads-Number-of-Cores-200)
+
+### 500 Hilos
+![](img/Threads-Number-of-Cores-500)
+
+## Parte 4
+
+
